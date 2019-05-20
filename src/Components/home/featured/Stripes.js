@@ -45,9 +45,7 @@ class Stripes extends Component {
                 opacity,
                 transform: `rotate(${rotate}deg) translate(${left}px,${top}px)`
               }}
-            >
-              TEST
-            </div>
+            />
           );
         }}
       </Animate>
