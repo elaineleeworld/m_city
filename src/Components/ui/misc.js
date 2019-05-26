@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { DataSnapshot } from "@firebase/database";
 
 export const Tag = props => {
   const template = (
@@ -23,4 +24,28 @@ export const Tag = props => {
   } else {
     return template;
   }
+};
+
+export const firebaseLooper = snapshot => {
+  let data = [];
+  snapshot.forEach(childSnapshot => {
+    data.push({
+      ...childSnapshot.val(),
+      id: childSnapshot.key
+    });
+  });
+  return data;
+};
+
+export const reverseArray = actualArray => {
+  // let reversedArray = [];
+  return actualArray.map((item, index) => actualArray[actualArray.length - 1 - index]);
+  // console.log("actualArray", actualArray);
+  // }
+  // actualArray.reverse().forEach(function(item) {
+  //   reversedArray.push(item);
+  //   console.log("item", item);
+  //   console.log("reversed", reversedArray);
+  // });
+  // return reversedArray;
 };

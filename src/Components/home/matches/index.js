@@ -1,5 +1,6 @@
 import React from "react";
 import { Tag } from "../../ui/misc";
+import Blocks from "./Blocks";
 
 const MatchesHome = () => {
   return (
@@ -16,7 +17,7 @@ const MatchesHome = () => {
       >
         MATCHES
       </Tag>
-      BLOCK TAG
+      <Blocks />
       <Tag bck="#ffffff" size="22px" color="#031731" link={true} linkto="/the_team">
         See more matches
       </Tag>
