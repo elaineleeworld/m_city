@@ -3,6 +3,7 @@ import Fade from "react-reveal/Fade";
 import FormFields from "../../ui/FormFields";
 import { validate } from "../../ui/misc";
 import { firebasePromotions } from "../../../firebase";
+
 export default class Enroll extends Component {
   state = {
     formError: false,
@@ -111,6 +112,7 @@ export default class Enroll extends Component {
               {this.state.formError ? <div className="error_label">Something is wrong, try again.</div> : null}
               <div className="success_label">{this.state.formSuccess}</div>
               <button onClick={event => this.submitForm(event)}>Enroll</button>
+              <div className="enroll_disclaimer">Disclaimer: Each entry is subject to certain rules and regulations.</div>
             </div>
           </form>
         </div>
