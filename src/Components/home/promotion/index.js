@@ -1,0 +1,15 @@
+import React from "react";
+import PromotionAnimation from "./PromotionAnimation";
+import Enroll from "./Enroll";
+
+const Promotion = () => {
+  return (
+    <div className="promotion_wrapper" style={{ background: "white" }}>
+      <div className="container" />
+      <PromotionAnimation />
+      <Enroll />
+    </div>
+  );
+};
+
+export default Promotion;
